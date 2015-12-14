@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400;700);
+@import "compass/css3";
+
+body > section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent center no-repeat;
+  background-size: cover;
+
+  &:nth-child(1) {
+    background: $first-bg;
+  }
+
+  &:nth-child(2) {
+    background: $second-bg;
+    overflow: hidden;
+  }
+
+  &:nth-child(3) {
+    background: $third-bg;
+  }
+
+  &:nth-child(4) {
+    background: $fourth-bg;
+  }
+
+  &:nth-child(5) {
+    background: $fifth-bg;
+  }
+
+  &:nth-child(6) {
+    background: $sixth-bg;
+  }
+
+  &:nth-child(7) {
+    background: $seventh-bg;
+  }
+}
+
+//first slide
+#icons {
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    margin: -300px 0 0 -400px;
+}
+
+.well {
+  background: rgba(252, 252, 252, 0.3);
+  height: 400px;
+}

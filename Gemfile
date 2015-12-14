@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem "middleman", "~>3.4.0"
 gem 'middleman-gh-pages'
 
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'sass-rails', '>= 3.2'
+gem 'font-awesome-sass', '~> 4.5.0'
+
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 

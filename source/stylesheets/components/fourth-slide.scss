@@ -1,0 +1,956 @@
+// 4th slide
+
+.slide__activities__play-area {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+
+  @include breakpoint(lt-desktop) {
+    top: 20px;
+    left: 25px;
+  }
+
+  @include breakpoint(lt-tablet) {
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    line-height: 20px;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.5);
+  }
+
+  .backboard,
+  .hoop,
+  .net,
+  .ball {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 3;
+  }
+
+  .ball {
+    top: 100%;
+    width: 44px;
+  }
+
+  .ball-svg {
+    width: 100%;
+    height: 100%;
+    animation: spinning 2s infinite linear;
+  }
+
+  .backboard {
+    width: 155px;
+    top: 10px;
+    z-index: 1;
+  }
+
+  .hoop,
+  .net {
+    width: 90px;
+    top: 100px;
+  }
+
+  .net {
+    z-index: 2;
+  }
+
+  .no-csstransitions & {
+    .ball {
+      width: 132px;
+      z-index: 5;
+    }
+  }
+
+  &.animation-one {
+    .net {
+      animation: netOne 2s forwards;
+    }
+
+    .ball {
+      animation: throwOne 2s forwards;
+    }
+  }
+
+  &.animation-one-miss {
+    .backboard {
+      animation: backOne 2s forwards;
+    }
+
+    .ball {
+      animation: missOne 2s forwards;
+    }
+  }
+
+  &.animation-two {
+    .net {
+      animation: netOne 2s forwards;
+    }
+
+    .ball {
+      animation: throwTwo 2s forwards;
+    }
+  }
+
+  &.animation-two-miss {
+    .backboard {
+      animation: backOne 2s forwards;
+    }
+
+    .ball {
+      animation: missTwo 2s forwards;
+    }
+  }
+
+  &.animation-three {
+    .net {
+      animation: netOne 2s forwards;
+    }
+
+    .ball {
+      animation: throwThree 2s forwards;
+    }
+  }
+
+  &.animation-three-miss {
+    .backboard {
+      animation: backOne 2s forwards;
+    }
+
+    .ball {
+      animation: missThree 2s forwards;
+    }
+  }
+
+  &.animation-four {
+    .net {
+      animation: netOne 2s forwards;
+    }
+
+    .ball {
+      animation: throwFour 2s forwards;
+    }
+
+    .ball-svg {
+      animation: spinning-alternate 2s infinite;
+    }
+  }
+
+  &.animation-four-miss {
+    .ball {
+      animation: missFour 2s forwards;
+    }
+
+    .ball-svg {
+      animation: spinning-alternate 2s infinite;
+    }
+  }
+
+  &.animation-five {
+    .net {
+      animation: netOne 2s forwards;
+    }
+
+    .ball {
+      animation: throwFive 2s forwards;
+    }
+
+    .ball-svg {
+      animation: spinning-alternate-2 2s infinite;
+    }
+  }
+
+  &.animation-five-miss {
+    .ball {
+      animation: missFive 2s forwards;
+    }
+
+    .ball-svg {
+      animation: spinning-alternate-2 2s infinite;
+    }
+  }
+}
+
+.slide__activities__play-area--title {
+  position: relative;
+  top: 250px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@keyframes netOne {
+  0% {
+    top: 100px;
+    transform: scaleY(1);
+  }
+
+  40% {
+    top: 100px;
+    transform: scaleY(1);
+  }
+
+  60% {
+    top: 108px;
+    transform: scaleY(1.2);
+  }
+
+  70% {
+    top: 100px;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes throwOne {
+  0% {
+    top: 300px;
+    z-index: 4;
+    transform: scale(3);
+  }
+
+  19% {
+    z-index: 4;
+  }
+
+  30% {
+    top: 30px;
+    z-index: 1;
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  60% {
+    top: 160px;
+  }
+
+  80% {
+    top: 300px;
+  }
+
+  100% {
+    top: 300px;
+    z-index: 1;
+  }
+}
+
+@keyframes missOne {
+  0% {
+    top: 300px;
+    z-index: 4;
+    transform: scale(5);
+  }
+
+  30% {
+    top: 30px;
+    transform: scale(0.9);
+  }
+
+  40% {
+    top: 30px;
+  }
+
+  100% {
+    top: 350px;
+    z-index: 4;
+    transform: scale(2);
+  }
+}
+
+@keyframes backOne {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  29% {
+    transform: rotateX(0deg);
+  }
+
+  30% {
+    transform: rotateX(30deg);
+  }
+
+  35% {
+    transform: rotateX(15deg);
+  }
+
+  40% {
+    transform: rotateX(25deg);
+  }
+
+  45% {
+    transform: rotateX(10deg);
+  }
+
+  50% {
+    transform: rotateX(20deg);
+  }
+
+  55% {
+    transform: rotateX(5deg);
+  }
+
+  60% {
+    transform: rotateX(10deg);
+  }
+
+  65% {
+    transform: rotateX(0deg);
+  }
+
+  70% {
+    transform: rotateX(5deg);
+  }
+
+  75% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes throwTwo {
+  0% {
+    top: 300px;
+    right: -400px;
+    z-index: 4;
+    transform: scale(3);
+  }
+
+  19% {
+    z-index: 4;
+  }
+
+  30% {
+    top: 30px;
+    z-index: 1;
+  }
+
+  50% {
+    right: 0px;
+    transform: scale(1);
+  }
+
+  60% {
+    top: 160px;
+  }
+
+  80% {
+    top: 300px;
+  }
+
+  100% {
+    top: 300px;
+    z-index: 1;
+  }
+}
+
+@keyframes missTwo {
+  0% {
+    top: 300px;
+    right: -400px;
+    z-index: 4;
+    transform: scale(5);
+  }
+
+  30% {
+    top: 30px;
+    right: 0px;
+    transform: scale(0.9);
+  }
+
+  40% {
+    top: 30px;
+  }
+
+  100% {
+    top: 350px;
+    right: 200px;
+    z-index: 4;
+    transform: scale(2);
+  }
+}
+
+@keyframes throwThree {
+  0% {
+    top: 300px;
+    left: -400px;
+    z-index: 4;
+    transform: scale(3);
+  }
+
+  19% {
+    z-index: 4;
+  }
+
+  30% {
+    top: 30px;
+    z-index: 1;
+  }
+
+  50% {
+    left: 0px;
+    transform: scale(1);
+  }
+
+  60% {
+    top: 160px;
+  }
+
+  80% {
+    top: 300px;
+  }
+
+  100% {
+    top: 300px;
+    z-index: 1;
+  }
+}
+
+@keyframes missThree {
+  0% {
+    top: 300px;
+    left: -400px;
+    z-index: 4;
+    transform: scale(5);
+  }
+
+  30% {
+    top: 30px;
+    left: 0px;
+    transform: scale(0.9);
+  }
+
+  40% {
+    top: 30px;
+  }
+
+  100% {
+    top: 350px;
+    left: 200px;
+    z-index: 4;
+    transform: scale(2);
+  }
+}
+
+@keyframes throwFour {
+  0% {
+    top: 300px;
+    left: -200px;
+    z-index: 4;
+    transform: scale(3);
+  }
+
+  19% {
+    z-index: 4;
+  }
+
+  20% {
+    top: 30px;
+  }
+
+  30% {
+    top: 60px;
+    left: 55px;
+    z-index: 1;
+  }
+
+  35% {
+    top: 90px;
+  }
+
+  40% {
+    top: 70px;
+    left: -45px;
+  }
+
+  50% {
+    left: 0;
+    transform: scale(1);
+  }
+
+  55% {
+    top: 150px;
+  }
+
+  60% {
+    top: 160px;
+  }
+
+  80% {
+    top: 300px;
+  }
+
+  100% {
+    top: 300px;
+    z-index: 1;
+  }
+}
+
+@keyframes missFour {
+  0% {
+    top: 300px;
+    left: -200px;
+    z-index: 4;
+    transform: scale(3);
+  }
+
+  19% {
+    z-index: 4;
+  }
+
+  20% {
+    top: 30px;
+  }
+
+  30% {
+    top: 60px;
+    left: 55px;
+    z-index: 1;
+  }
+
+  35% {
+    top: 90px;
+  }
+
+  40% {
+    top: 60px;
+    left: -90px;
+  }
+
+  50% {
+    left: -110px;
+    top: 65px;
+    transform: scale(1);
+  }
+
+  100% {
+    top: 400px;
+    left: -110px;
+    z-index: 1;
+  }
+}
+
+@keyframes throwFive {
+  0% {
+    top: 300px;
+    right: -200px;
+    z-index: 4;
+    transform: scale(3);
+  }
+
+  19% {
+    z-index: 4;
+  }
+
+  20% {
+    top: 30px;
+  }
+
+  30% {
+    top: 60px;
+    right: 55px;
+    z-index: 1;
+  }
+
+  35% {
+    top: 90px;
+  }
+
+  40% {
+    top: 70px;
+    right: -45px;
+  }
+
+  50% {
+    right: 0;
+    transform: scale(1);
+  }
+
+  55% {
+    top: 150px;
+  }
+
+  60% {
+    top: 160px;
+  }
+
+  80% {
+    top: 300px;
+  }
+
+  100% {
+    z-index: 1;
+    top: 300px;
+  }
+}
+
+@keyframes missFive {
+  0% {
+    top: 300px;
+    right: -200px;
+    z-index: 4;
+    transform: scale(3);
+  }
+
+  19% {
+    z-index: 4;
+  }
+
+  20% {
+    top: 30px;
+  }
+
+  30% {
+    top: 60px;
+    right: 55px;
+    z-index: 1;
+  }
+
+  35% {
+    top: 90px;
+  }
+
+  40% {
+    top: 60px;
+    right: -90px;
+  }
+
+  50% {
+    right: -110px;
+    top: 65px;
+    transform: scale(1);
+  }
+
+  100% {
+    top: 400px;
+    right: -110px;
+    z-index: 1;
+  }
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinning-alternate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  27% {
+    transform: rotate(360deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spinning-alternate-2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  27% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+}
+
+
+// beer
+
+.slide__activities__beer--wrapper {
+  position: relative;
+  height: 300px;
+  margin: 0 0 0 40%;
+}
+
+.slide__activities__beer--keg {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  height: 200px;
+  width: 70px;
+  border-right: solid 20px #434A54;
+  background-color: #656D78;
+
+  .pipe {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    height: 30px;
+    width: 10px;
+    background-color: #CCD1D9;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: 5px;
+      content: " ";
+      height: 20px;
+      width: 30px;
+      border-radius: 0 10px 10px 0;
+      background: linear-gradient(to bottom, #CCD1D9 50%, #AAB2BD 50%);
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: " ";
+      width: 10px;
+      background-color: rgba(255, 206, 84, 0.5);
+      animation: flow 5s ease infinite;
+    }
+  }
+
+  .pipe-front {
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    height: 14px;
+    width: 14px;
+    border-radius: 10px;
+    border: solid 3px #CCD1D9;
+    background-color: #F5F7FA;
+  }
+
+  .pipe-handle {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 0;
+    height: 5px;
+    border-style: solid;
+    border-width: 50px 10px 0 10px;
+    border-color: black transparent transparent transparent;
+    animation: handle 5s ease infinite;
+    transform-origin: center bottom;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: -60px;
+      left: -10px;
+      content: ' ';
+      width: 20px;
+      height: 10px;
+      border-radius: 5px 5px 0 0;
+      background-color: #CCD1D9;
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: -20px;
+      left: -5px;
+      content: ' ';
+      width: 10px;
+      height: 20px;
+      background-color: #CCD1D9;
+    }
+  }
+}
+
+@keyframes flow {
+  0%, 15% {
+    top: 30px;
+    height: 0px;
+  }
+  20% {
+     height: 125px;
+  }
+  40% {
+    top: 30px;
+    height: 85px;
+  }
+  55% {
+    top: 30px;
+    height: 60px;
+  }
+  60%, 100% {
+    top: 70px;
+    height: 0px;
+  }
+}
+
+@keyframes handle {
+  0%, 10% {
+   transform: rotate(0deg);
+  }
+  20%, 50% {
+   transform: rotate(-90deg);
+  }
+  60%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+.slide__activities__beer--glass {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 70px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.0);
+  animation: slide 5s ease forwards infinite;
+
+  .front-glass {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .beer {
+    position: absolute;
+    bottom: 15px;
+    margin: 0 5px;
+    width: 60px;
+    border-radius: 0 0 5px 5px;
+    border-top: solid 0px rgba(255, 206, 84, 0.8);
+    background-color: rgba(255, 206, 84, 0.8);
+    animation: fillup 5s ease infinite;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: " ";
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+      background-color: white;
+      animation: fillupfoam 5s linear infinite, wave 0.5s alternate infinite;
+    }
+  }
+
+  .handle {
+    position: absolute;
+    right: -20px;
+    top: 20px;
+
+    .top-right {
+      height: 20px;
+      width: 10px;
+      border-top: solid 10px rgba(255, 255, 255, 0.4);
+      border-right: solid 10px rgba(255, 255, 255, 0.4);
+      border-top-right-radius: 20px;
+    }
+
+    .bottom-right {
+      height: 20px;
+      width: 10px;
+      border-bottom: solid 10px rgba(255, 255, 255, 0.4);
+      border-right: solid 10px rgba(255, 255, 255, 0.4);
+      border-bottom-right-radius: 20px;
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+
+  20%, 80% {
+    left: 10px;
+    opacity: 1;
+  }
+
+  100% {
+    left: 100px;
+    opacity: 0;
+    }
+  }
+
+@keyframes fillup {
+  0%, 20% {
+    height: 0px;
+    border-width: 0px;
+  }
+
+  40% {
+    height: 40px;
+  }
+
+  80%, 100% {
+    height: 80px;
+    border-width: 5px;
+  }
+}
+
+@keyframes fillupfoam {
+  0%, 20% {
+    top: 0px;
+    height: 0px;
+  }
+
+  60%, 100% {
+    top: -14px;
+    height: 15px;
+  }
+}
+
+@keyframes wave {
+  from {
+    transform: skew(0, -3deg);
+  }
+
+  to {
+    transform: skew(0, 3deg);
+  }
+}
+
+// piano
+
+.slide__activities__piano--wrapper {
+  margin-left: 25%;
+  margin-top: 90px;
+
+  .slide__activities__piano--key {
+    position: relative;
+    float: left;
+    width: 30px;
+    margin: 7px;
+
+    &.one {
+      z-index: 20;
+    }
+
+    &.two {
+      z-index: 10;
+    }
+
+    &.three {
+      z-index: 5;
+    }
+
+    .slide__activities__piano--key--black {
+      position: absolute;
+      left: 40px;
+      width: 25px;
+      height: 100px;
+      border-radius: 5px;
+      background: black;
+    }
+
+    .slide__activities__piano--key--white {
+      width: 40px;
+      height: 150px;
+      margin: 10px;
+      border-radius: 5px;
+      background: white;
+    }
+  }
+}

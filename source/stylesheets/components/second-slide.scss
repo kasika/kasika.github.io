@@ -1,0 +1,37 @@
+.city-path {
+  position: relative;
+  z-index: 2;
+}
+
+@include keyframes(rotate-left) {
+  0%   { @include rotateZ(0deg); }
+  100% { @include rotateZ(360deg); }
+}
+@include keyframes(rotate-right) {
+  0%   { @include rotateZ(360deg); }
+  100% { @include rotateZ(0deg); }
+}
+
+.header {
+  position: relative;
+  background: #faaa65;
+  height: 100vh;
+  height: 1500;
+  overflow: hidden;
+}
+
+.header-gears {
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  margin-left: (-1540px/2);
+  width: 1540px;
+  opacity: .07;
+  z-index: 1;
+}
+
+.header-gear {
+  @include transform-origin(50%,50%);
+  &.rotate-left { @include animation(rotate-left 180000ms infinite linear); }
+  &.rotate-right { @include animation(rotate-right 85000ms infinite linear); }
+}

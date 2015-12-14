@@ -1,0 +1,135 @@
+.marker--poland {
+	position: relative;
+  top: 230px;
+  left: 746px;
+}
+
+.marker--holand {
+	position: relative;
+  top: 208px;
+  left: 694px;
+}
+
+.marker--spain {
+	position: relative;
+  top: 249px;
+  left: 668px;
+}
+
+.marker--brasil {
+	position: relative;
+  top: 455px;
+  left: 522px;
+}
+
+.pulse {
+	width: 10px;
+	height: 10px;
+	border: 5px solid #7fd2e6;
+
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background-color: #00a6cd;
+	z-index: 10;
+	position: absolute;
+}
+
+.dot {
+  position: absolute;
+  height: 50px;
+	width: 50px;
+	top: -20px;
+	left: -20px;
+	z-index: 2;
+	opacity: 0;
+	border: 10px solid rgba(0,166,205,1);;
+	background: transparent;
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
+	border-radius: 60px;
+	-webkit-animation: flash 2s ease-out;
+	-moz-animation: flash 2s ease-out;
+	animation: flash 2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes pulse {
+ 0% {-moz-transform: scale(0);opacity: 0.0;}
+ 25% {-moz-transform: scale(0);opacity: 0.1;}
+ 50% {-moz-transform: scale(0.1);opacity: 0.3;}
+ 75% {-moz-transform: scale(0.5);opacity: 0.5;}
+ 100% {-moz-transform: scale(1);opacity: 0.0;}
+}
+
+@-webkit-keyframes "flash" {
+ 0% {-webkit-transform: scale(0);opacity: 0.0;}
+ 25% {-webkit-transform: scale(0);opacity: 0.1;}
+ 50% {-webkit-transform: scale(0.1);opacity: 0.3;}
+ 75% {-webkit-transform: scale(0.5);opacity: 0.5;}
+ 100% {-webkit-transform: scale(1);opacity: 0.0;}
+}
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+}

@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "variables";
+@import 'utilities/mixins';
+@import 'utilities/shared';
+@import 'components/*';
+@import 'components/fifth-slide';
+@import 'components/sixth-slide';
+@import 'settings/*';
+// @import 'bootstrap_overrides/*';
