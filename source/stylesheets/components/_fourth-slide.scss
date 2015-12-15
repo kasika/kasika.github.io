@@ -38,6 +38,10 @@
     width: 100%;
     height: 100%;
     animation: spinning 2s infinite linear;
+    animation-name: spinning;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
 
   .backboard {
@@ -66,108 +70,192 @@
   &.animation-one {
     .net {
       animation: netOne 2s forwards;
+      animation-name: netOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball {
       animation: throwOne 2s forwards;
+      animation-name: throwOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
   }
 
   &.animation-one-miss {
     .backboard {
       animation: backOne 2s forwards;
+      animation-name: backOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball {
       animation: missOne 2s forwards;
+      animation-name: missOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
   }
 
   &.animation-two {
     .net {
       animation: netOne 2s forwards;
+      animation-name: netOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball {
       animation: throwTwo 2s forwards;
+      animation-name: throwTwo;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
   }
 
   &.animation-two-miss {
     .backboard {
       animation: backOne 2s forwards;
+      animation-name: backOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball {
       animation: missTwo 2s forwards;
+      animation-name: missTwo;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
   }
 
   &.animation-three {
     .net {
       animation: netOne 2s forwards;
+      animation-name: netOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball {
       animation: throwThree 2s forwards;
+      animation-name: throwThree;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
   }
 
   &.animation-three-miss {
     .backboard {
       animation: backOne 2s forwards;
+      animation-name: backOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball {
       animation: missThree 2s forwards;
+      animation-name: missThree;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
   }
 
   &.animation-four {
     .net {
       animation: netOne 2s forwards;
+      animation-name: netOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball {
       animation: throwFour 2s forwards;
+      animation-name: throwFour;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball-svg {
       animation: spinning-alternate 2s infinite;
+      animation-name: spinning-alternate;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
   }
 
   &.animation-four-miss {
     .ball {
       animation: missFour 2s forwards;
+      animation-name: missFour;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball-svg {
       animation: spinning-alternate 2s infinite;
+      animation-name: spinning-alternate;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
   }
 
   &.animation-five {
     .net {
       animation: netOne 2s forwards;
+      animation-name: netOne;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball {
       animation: throwFive 2s forwards;
+      animation-name: throwFive;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball-svg {
       animation: spinning-alternate-2 2s infinite;
+      animation-name: spinning-alternate-2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
   }
 
   &.animation-five-miss {
     .ball {
       animation: missFive 2s forwards;
+      animation-name: missFive;
+      animation-iteration-count: 1;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
     }
 
     .ball-svg {
       animation: spinning-alternate-2 2s infinite;
+      animation-name: spinning-alternate-2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
   }
 }
@@ -180,343 +268,101 @@
 }
 
 @keyframes netOne {
-  0% {
-    top: 100px;
-    transform: scaleY(1);
-  }
-
-  40% {
-    top: 100px;
-    transform: scaleY(1);
-  }
-
-  60% {
-    top: 108px;
-    transform: scaleY(1.2);
-  }
-
-  70% {
-    top: 100px;
-    transform: scaleY(1);
-  }
+  0% { top: 100px; transform: scaleY(1); }
+  40% { top: 100px; transform: scaleY(1); }
+  60% { top: 108px; transform: scaleY(1.2); }
+  70% { top: 100px; transform: scaleY(1); }
+  100% { top: 100px; transform: scaleY(1); }
 }
 
 @keyframes throwOne {
-  0% {
-    top: 300px;
-    z-index: 4;
-    transform: scale(3);
-  }
-
-  19% {
-    z-index: 4;
-  }
-
-  30% {
-    top: 30px;
-    z-index: 1;
-  }
-
-  50% {
-    transform: scale(1);
-  }
-
-  60% {
-    top: 160px;
-  }
-
-  80% {
-    top: 300px;
-  }
-
-  100% {
-    top: 300px;
-    z-index: 1;
-  }
+  0% { top: 300px; z-index: 4; transform: scale(3); }
+  19% { z-index: 4; }
+  30% { top: 30px; z-index: 1; }
+  50% { transform: scale(1); }
+  60% { top: 160px; }
+  80% { top: 300px; }
+  100% { top: 300px; z-index: 1; }
 }
 
 @keyframes missOne {
-  0% {
-    top: 300px;
-    z-index: 4;
-    transform: scale(5);
-  }
-
-  30% {
-    top: 30px;
-    transform: scale(0.9);
-  }
-
-  40% {
-    top: 30px;
-  }
-
-  100% {
-    top: 350px;
-    z-index: 4;
-    transform: scale(2);
-  }
+  0% { top: 300px; z-index: 4; transform: scale(5); }
+  30% { top: 30px; transform: scale(0.9); }
+  40% { top: 30px; }
+  100% { top: 350px; z-index: 4; transform: scale(2); }
 }
 
 @keyframes backOne {
-  0% {
-    transform: rotateX(0deg);
-  }
-
-  29% {
-    transform: rotateX(0deg);
-  }
-
-  30% {
-    transform: rotateX(30deg);
-  }
-
-  35% {
-    transform: rotateX(15deg);
-  }
-
-  40% {
-    transform: rotateX(25deg);
-  }
-
-  45% {
-    transform: rotateX(10deg);
-  }
-
-  50% {
-    transform: rotateX(20deg);
-  }
-
-  55% {
-    transform: rotateX(5deg);
-  }
-
-  60% {
-    transform: rotateX(10deg);
-  }
-
-  65% {
-    transform: rotateX(0deg);
-  }
-
-  70% {
-    transform: rotateX(5deg);
-  }
-
-  75% {
-    transform: rotateX(0deg);
-  }
+  0% { transform: rotateX(0deg); }
+  29% { transform: rotateX(0deg); }
+  30% { transform: rotateX(30deg); }
+  35% { transform: rotateX(15deg); }
+  40% { transform: rotateX(25deg); }
+  45% { transform: rotateX(10deg); }
+  50% { transform: rotateX(20deg); }
+  55% { transform: rotateX(5deg); }
+  60% { transform: rotateX(10deg); }
+  65% { transform: rotateX(0deg); }
+  70% { transform: rotateX(5deg); }
+  75% { transform: rotateX(0deg); }
+  100% { transform: rotateX(0deg); }
 }
 
 @keyframes throwTwo {
-  0% {
-    top: 300px;
-    right: -400px;
-    z-index: 4;
-    transform: scale(3);
-  }
-
-  19% {
-    z-index: 4;
-  }
-
-  30% {
-    top: 30px;
-    z-index: 1;
-  }
-
-  50% {
-    right: 0px;
-    transform: scale(1);
-  }
-
-  60% {
-    top: 160px;
-  }
-
-  80% {
-    top: 300px;
-  }
-
-  100% {
-    top: 300px;
-    z-index: 1;
-  }
+  0% { top: 300px; right: -400px; z-index: 4; transform: scale(3); }
+  19% { z-index: 4; }
+  30% { top: 30px; z-index: 1; }
+  50% { right: 0px; transform: scale(1); }
+  60% { top: 160px; }
+  80% { top: 300px; }
+  100% { top: 300px; z-index: 1; }
 }
 
 @keyframes missTwo {
-  0% {
-    top: 300px;
-    right: -400px;
-    z-index: 4;
-    transform: scale(5);
-  }
-
-  30% {
-    top: 30px;
-    right: 0px;
-    transform: scale(0.9);
-  }
-
-  40% {
-    top: 30px;
-  }
-
-  100% {
-    top: 350px;
-    right: 200px;
-    z-index: 4;
-    transform: scale(2);
-  }
+  0% { top: 300px; right: -400px; z-index: 4; transform: scale(5); }
+  30% { top: 30px; right: 0px; transform: scale(0.9); }
+  40% { top: 30px; }
+  100% { top: 350px; right: 200px; z-index: 4; transform: scale(2); }
 }
 
 @keyframes throwThree {
-  0% {
-    top: 300px;
-    left: -400px;
-    z-index: 4;
-    transform: scale(3);
-  }
-
-  19% {
-    z-index: 4;
-  }
-
-  30% {
-    top: 30px;
-    z-index: 1;
-  }
-
-  50% {
-    left: 0px;
-    transform: scale(1);
-  }
-
-  60% {
-    top: 160px;
-  }
-
-  80% {
-    top: 300px;
-  }
-
-  100% {
-    top: 300px;
-    z-index: 1;
-  }
+  0% { top: 300px; left: -400px; z-index: 4; transform: scale(3); }
+  19% { z-index: 4; }
+  30% { top: 30px; z-index: 1; }
+  50% { left: 0px; transform: scale(1); }
+  60% { top: 160px; }
+  80% { top: 300px; }
+  100% { top: 300px; z-index: 1; }
 }
 
 @keyframes missThree {
-  0% {
-    top: 300px;
-    left: -400px;
-    z-index: 4;
-    transform: scale(5);
-  }
-
-  30% {
-    top: 30px;
-    left: 0px;
-    transform: scale(0.9);
-  }
-
-  40% {
-    top: 30px;
-  }
-
-  100% {
-    top: 350px;
-    left: 200px;
-    z-index: 4;
-    transform: scale(2);
-  }
+  0% { top: 300px; left: -400px; z-index: 4; transform: scale(5); }
+  30% { top: 30px; left: 0px; transform: scale(0.9); }
+  40% { top: 30px; }
+  100% { top: 350px; left: 200px; z-index: 4; transform: scale(2); }
 }
 
 @keyframes throwFour {
-  0% {
-    top: 300px;
-    left: -200px;
-    z-index: 4;
-    transform: scale(3);
-  }
-
-  19% {
-    z-index: 4;
-  }
-
-  20% {
-    top: 30px;
-  }
-
-  30% {
-    top: 60px;
-    left: 55px;
-    z-index: 1;
-  }
-
-  35% {
-    top: 90px;
-  }
-
-  40% {
-    top: 70px;
-    left: -45px;
-  }
-
-  50% {
-    left: 0;
-    transform: scale(1);
-  }
-
-  55% {
-    top: 150px;
-  }
-
-  60% {
-    top: 160px;
-  }
-
-  80% {
-    top: 300px;
-  }
-
-  100% {
-    top: 300px;
-    z-index: 1;
-  }
+  0% { top: 300px; left: -200px; z-index: 4; transform: scale(3); }
+  19% { z-index: 4; }
+  20% { top: 30px; }
+  30% { top: 60px; left: 55px; z-index: 1; }
+  35% { top: 90px; }
+  40% { top: 70px; left: -45px; }
+  50% { left: 0; transform: scale(1); }
+  55% { top: 150px; }
+  60% { top: 160px; }
+  80% { top: 300px; }
+  100% { top: 300px; z-index: 1; }
 }
 
 @keyframes missFour {
-  0% {
-    top: 300px;
-    left: -200px;
-    z-index: 4;
-    transform: scale(3);
-  }
-
-  19% {
-    z-index: 4;
-  }
-
-  20% {
-    top: 30px;
-  }
-
-  30% {
-    top: 60px;
-    left: 55px;
-    z-index: 1;
-  }
-
-  35% {
-    top: 90px;
-  }
-
-  40% {
-    top: 60px;
-    left: -90px;
-  }
-
+  0% { top: 300px; left: -200px; z-index: 4; transform: scale(3); }
+  19% { z-index: 4; }
+  20% { top: 30px; }
+  30% { top: 60px; left: 55px; z-index: 1; }
+  35% { top: 90px; }
+  40% { top: 60px; left: -90px; }
   50% {
     left: -110px;
     top: 65px;
@@ -531,139 +377,47 @@
 }
 
 @keyframes throwFive {
-  0% {
-    top: 300px;
-    right: -200px;
-    z-index: 4;
-    transform: scale(3);
-  }
-
-  19% {
-    z-index: 4;
-  }
-
-  20% {
-    top: 30px;
-  }
-
-  30% {
-    top: 60px;
-    right: 55px;
-    z-index: 1;
-  }
-
-  35% {
-    top: 90px;
-  }
-
-  40% {
-    top: 70px;
-    right: -45px;
-  }
-
-  50% {
-    right: 0;
-    transform: scale(1);
-  }
-
-  55% {
-    top: 150px;
-  }
-
-  60% {
-    top: 160px;
-  }
-
-  80% {
-    top: 300px;
-  }
-
-  100% {
-    z-index: 1;
-    top: 300px;
-  }
+  0% { top: 300px; right: -200px; z-index: 4; transform: scale(3); }
+  19% { z-index: 4; }
+  20% { top: 30px; }
+  30% { top: 60px; right: 55px; z-index: 1; }
+  35% { top: 90px; }
+  40% { top: 70px; right: -45px; }
+  50% { right: 0; transform: scale(1); }
+  55% { top: 150px; }
+  60% { top: 160px; }
+  80% { top: 300px; }
+  100% { z-index: 1; top: 300px; }
 }
 
 @keyframes missFive {
-  0% {
-    top: 300px;
-    right: -200px;
-    z-index: 4;
-    transform: scale(3);
-  }
-
-  19% {
-    z-index: 4;
-  }
-
-  20% {
-    top: 30px;
-  }
-
-  30% {
-    top: 60px;
-    right: 55px;
-    z-index: 1;
-  }
-
-  35% {
-    top: 90px;
-  }
-
-  40% {
-    top: 60px;
-    right: -90px;
-  }
-
-  50% {
-    right: -110px;
-    top: 65px;
-    transform: scale(1);
-  }
-
-  100% {
-    top: 400px;
-    right: -110px;
-    z-index: 1;
-  }
+  0% { top: 300px; right: -200px; z-index: 4; transform: scale(3); }
+  19% { z-index: 4; }
+  20% { top: 30px; }
+  30% { top: 60px; right: 55px; z-index: 1; }
+  35% { top: 90px; }
+  40% { top: 60px; right: -90px; }
+  50% { right: -110px; top: 65px; transform: scale(1); }
+  100% { top: 400px; right: -110px; z-index: 1; }
 }
 
 @keyframes spinning {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes spinning-alternate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  27% {
-    transform: rotate(360deg);
-  }
-
-  75% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(0deg); }
+  27% { transform: rotate(360deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
 @keyframes spinning-alternate-2 {
-  0% {
-    transform: rotate(360deg);
-  }
-
-  27% {
-    transform: rotate(0deg);
-  }
-
-  75% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(360deg); }
+  27% { transform: rotate(0deg); }
+  75% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
 }
 
 
