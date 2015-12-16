@@ -118,7 +118,7 @@ $(document).ready(function() {
   var ball, failures, net, playable, playarea, successes;
   ball = $('.ball');
   net = $('.net');
-  playarea = $('.slide__activities__play-area');
+  playarea = $('.activities__play-area');
   playable = true;
   successes = ['animation-one', 'animation-two', 'animation-three', 'animation-four', 'animation-five'];
   failures = ['animation-one-miss', 'animation-two-miss', 'animation-three-miss', 'animation-four-miss', 'animation-five-miss'];

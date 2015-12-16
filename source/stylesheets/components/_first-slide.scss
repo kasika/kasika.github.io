@@ -1,0 +1,59 @@
+.slide {
+  &__header {
+    .slide__icons {
+      position: fixed;
+      top: 57%;
+      left: 50%;
+      margin: -300px 0 0 -400px;
+    }
+
+    .slide__title {
+      margin-top: 20%;
+      
+      .slide__type-writer {
+        &--first {
+          position: relative;
+          top: 30%;
+          overflow: hidden;
+          margin: 0 auto;
+          font-family: Montserrat;
+          text-align: center;
+          white-space: nowrap;
+          width: 22em;
+          font-size: 40px;
+          color: hsla(43, 100%, 71%, 1);
+          border-right: 2px solid rgba(255,255,255,.75);
+          animation: typewriter 3s steps(40) 1s 1 normal both,
+                     blinkTextCursor 500ms steps(40) infinite normal;
+        }
+
+        &--second {
+          @extend .slide__type-writer--first;
+          width: 34em;
+          font-size: 20px;
+          color: hsla(156, 43%, 65%, 1);
+          border-right: none;
+          animation: typewriter-2 2s steps(70) 1s 1 normal both;
+        }
+      }
+    }
+  }
+}
+
+
+/* Animation */
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 22em; }
+}
+
+@keyframes blinkTextCursor {
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+
+@keyframes typewriter-2 {
+  from { width: 0; }
+  to { width: 34em; }
+}

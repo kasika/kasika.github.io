@@ -1,6 +1,23 @@
-.city-path {
-  position: relative;
-  z-index: 2;
+.slide__background {
+  .slide__gears {
+    position: absolute;
+    top: -250px;
+    left: 50%;
+    width: 1540px;
+    margin-left: (-1540px/2);
+    opacity: .07;
+    z-index: 1;
+
+    &--right {
+      animation: rotate-right 45000ms linear infinite;
+      transform-origin: 480px 300px 0;
+    }
+
+    &--left {
+      animation: rotate-left 75000ms linear infinite;
+      transform-origin: 770px 1205px 0;
+    }
+  }
 }
 
 @keyframes rotate-left {
@@ -15,30 +32,18 @@
   }
 }
 
-.header {
+.slide__city {
   position: relative;
-  background: #faaa65;
-  height: 100vh;
-  height: 1500;
-  overflow: hidden;
-}
+  z-index: 2;
 
-.header-gears {
-  position: absolute;
-  top: -250px;
-  left: 50%;
-  margin-left: (-1540px/2);
-  width: 1540px;
-  opacity: .07;
-  z-index: 1;
-}
+  &--text {
+    font-size: 20px;
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 
-.rotate-right {
-  animation: rotate-right 45000ms linear infinite;
-  transform-origin: 480px 300px 0;
-}
-
-.rotate-left {
-  animation: rotate-left 75000ms linear infinite;
-  transform-origin: 770px 1205px 0;
+  &--header {
+    font-family: Montserrat;
+    font-size: 48px;
+  }
 }

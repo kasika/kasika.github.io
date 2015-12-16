@@ -1,8 +1,20 @@
 .slide__header {
-  color: lighten(#091e2e, 10%);;
-  margin: 50px 0 50px;
-
+  h2 {
+    color: lighten(#091e2e, 10%);;
+    margin: 50px 0 50px;
+  }
+  
   h1 {
+    margin: 50px 0 50px;
     color: $white;
+  }
+}
+
+.slide__text {
+  font-family: Montserrat;
+  font-size: 20px;
+
+  &--big {
+    font-size: 26px;
   }
 }

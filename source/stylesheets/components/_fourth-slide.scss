@@ -1,6 +1,6 @@
 // 4th slide
 
-.slide__activities__play-area {
+.activities__play-area {
   position: relative;
   overflow: hidden;
   height: 400px;
@@ -18,10 +18,10 @@
     text-shadow: 0 2px 0 rgba(0,0,0,0.5);
   }
 
-  .backboard,
-  .hoop,
-  .net,
-  .ball {
+  .activities__play-area--backboard,
+  .activities__play-area--hoop,
+  .activities__play-area--net,
+  .activities__play-area--ball {
     position: absolute;
     left: 0;
     right: 0;
@@ -29,12 +29,12 @@
     z-index: 3;
   }
 
-  .ball {
+  .activities__play-area--ball {
     top: 100%;
     width: 44px;
   }
 
-  .ball-svg {
+  .activities__play-area--ball-svg {
     width: 100%;
     height: 100%;
     animation: spinning 2s infinite linear;
@@ -44,31 +44,31 @@
     animation-timing-function: linear;
   }
 
-  .backboard {
+  .activities__play-area--backboard {
     width: 155px;
     top: 10px;
     z-index: 1;
   }
 
-  .hoop,
-  .net {
+  .activities__play-area--hoop,
+  .activities__play-area--net {
     width: 90px;
     top: 100px;
   }
 
-  .net {
+  .activities__play-area--net {
     z-index: 2;
   }
 
   .no-csstransitions & {
-    .ball {
+    .activities__play-area--ball {
       width: 132px;
       z-index: 5;
     }
   }
 
   &.animation-one {
-    .net {
+    .activities__play-area--net {
       animation: netOne 2s forwards;
       animation-name: netOne;
       animation-iteration-count: 1;
@@ -76,7 +76,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball {
+    .activities__play-area--ball {
       animation: throwOne 2s forwards;
       animation-name: throwOne;
       animation-iteration-count: 1;
@@ -86,7 +86,7 @@
   }
 
   &.animation-one-miss {
-    .backboard {
+    .activities__play-area--backboard {
       animation: backOne 2s forwards;
       animation-name: backOne;
       animation-iteration-count: 1;
@@ -94,7 +94,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball {
+    .activities__play-area--ball {
       animation: missOne 2s forwards;
       animation-name: missOne;
       animation-iteration-count: 1;
@@ -104,7 +104,7 @@
   }
 
   &.animation-two {
-    .net {
+    .activities__play-area--net {
       animation: netOne 2s forwards;
       animation-name: netOne;
       animation-iteration-count: 1;
@@ -112,7 +112,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball {
+    .activities__play-area--ball {
       animation: throwTwo 2s forwards;
       animation-name: throwTwo;
       animation-iteration-count: 1;
@@ -122,7 +122,7 @@
   }
 
   &.animation-two-miss {
-    .backboard {
+    .activities__play-area--backboard {
       animation: backOne 2s forwards;
       animation-name: backOne;
       animation-iteration-count: 1;
@@ -130,7 +130,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball {
+    .activities__play-area--ball {
       animation: missTwo 2s forwards;
       animation-name: missTwo;
       animation-iteration-count: 1;
@@ -140,7 +140,7 @@
   }
 
   &.animation-three {
-    .net {
+    .activities__play-area--net {
       animation: netOne 2s forwards;
       animation-name: netOne;
       animation-iteration-count: 1;
@@ -148,7 +148,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball {
+    .activities__play-area--ball {
       animation: throwThree 2s forwards;
       animation-name: throwThree;
       animation-iteration-count: 1;
@@ -158,7 +158,7 @@
   }
 
   &.animation-three-miss {
-    .backboard {
+    .activities__play-area--backboard {
       animation: backOne 2s forwards;
       animation-name: backOne;
       animation-iteration-count: 1;
@@ -166,7 +166,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball {
+    .activities__play-area--ball {
       animation: missThree 2s forwards;
       animation-name: missThree;
       animation-iteration-count: 1;
@@ -176,7 +176,7 @@
   }
 
   &.animation-four {
-    .net {
+    .activities__play-area--net {
       animation: netOne 2s forwards;
       animation-name: netOne;
       animation-iteration-count: 1;
@@ -184,7 +184,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball {
+    .activities__play-area--ball {
       animation: throwFour 2s forwards;
       animation-name: throwFour;
       animation-iteration-count: 1;
@@ -192,7 +192,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball-svg {
+    .activities__play-area--ball-svg {
       animation: spinning-alternate 2s infinite;
       animation-name: spinning-alternate;
       animation-duration: 2s;
@@ -201,7 +201,7 @@
   }
 
   &.animation-four-miss {
-    .ball {
+    .activities__play-area--ball {
       animation: missFour 2s forwards;
       animation-name: missFour;
       animation-iteration-count: 1;
@@ -209,7 +209,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball-svg {
+    .activities__play-area--ball-svg {
       animation: spinning-alternate 2s infinite;
       animation-name: spinning-alternate;
       animation-duration: 2s;
@@ -218,7 +218,7 @@
   }
 
   &.animation-five {
-    .net {
+    .activities__play-area--net {
       animation: netOne 2s forwards;
       animation-name: netOne;
       animation-iteration-count: 1;
@@ -226,7 +226,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball {
+    .activities__play-area--ball {
       animation: throwFive 2s forwards;
       animation-name: throwFive;
       animation-iteration-count: 1;
@@ -234,7 +234,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball-svg {
+    .activities__play-area--ball-svg {
       animation: spinning-alternate-2 2s infinite;
       animation-name: spinning-alternate-2;
       animation-duration: 2s;
@@ -243,7 +243,7 @@
   }
 
   &.animation-five-miss {
-    .ball {
+    .activities__play-area--ball {
       animation: missFive 2s forwards;
       animation-name: missFive;
       animation-iteration-count: 1;
@@ -251,7 +251,7 @@
       animation-fill-mode: forwards;
     }
 
-    .ball-svg {
+    .activities__play-area--ball-svg {
       animation: spinning-alternate-2 2s infinite;
       animation-name: spinning-alternate-2;
       animation-duration: 2s;
@@ -260,7 +260,7 @@
   }
 }
 
-.slide__activities__play-area--title {
+.activities__play-area--title {
   position: relative;
   top: 250px;
   font-style: italic;
@@ -363,17 +363,8 @@
   30% { top: 60px; left: 55px; z-index: 1; }
   35% { top: 90px; }
   40% { top: 60px; left: -90px; }
-  50% {
-    left: -110px;
-    top: 65px;
-    transform: scale(1);
-  }
-
-  100% {
-    top: 400px;
-    left: -110px;
-    z-index: 1;
-  }
+  50% { left: -110px; top: 65px; transform: scale(1); }
+  100% { top: 400px; left: -110px; z-index: 1; }
 }
 
 @keyframes throwFive {
@@ -423,13 +414,13 @@
 
 // beer
 
-.slide__activities__beer--wrapper {
+.activities__beer {
   position: relative;
   height: 300px;
   margin: 0 0 0 40%;
 }
 
-.slide__activities__beer--keg {
+.activities__beer--keg {
   position: absolute;
   bottom: 0;
   left: 10px;
@@ -517,40 +508,20 @@
 }
 
 @keyframes flow {
-  0%, 15% {
-    top: 30px;
-    height: 0px;
-  }
-  20% {
-     height: 125px;
-  }
-  40% {
-    top: 30px;
-    height: 85px;
-  }
-  55% {
-    top: 30px;
-    height: 60px;
-  }
-  60%, 100% {
-    top: 70px;
-    height: 0px;
-  }
+  0%, 15% { top: 30px; height: 0px; }
+  20% { height: 125px; }
+  40% { top: 30px; height: 85px; }
+  55% { top: 30px; height: 60px; }
+  60%, 100% { top: 70px; height: 0px; }
 }
 
 @keyframes handle {
-  0%, 10% {
-   transform: rotate(0deg);
-  }
-  20%, 50% {
-   transform: rotate(-90deg);
-  }
-  60%, 100% {
-    transform: rotate(0deg);
-  }
+  0%, 10% { transform: rotate(0deg); }
+  20%, 50% { transform: rotate(-90deg); }
+  60%, 100% { transform: rotate(0deg); }
 }
 
-.slide__activities__beer--glass {
+.activities__beer--glass {
   position: absolute;
   bottom: 0;
   height: 100px;
@@ -612,67 +583,34 @@
 }
 
 @keyframes slide {
-  0% {
-    left: 0;
-    opacity: 0;
-  }
-
-  20%, 80% {
-    left: 10px;
-    opacity: 1;
-  }
-
-  100% {
-    left: 100px;
-    opacity: 0;
-    }
-  }
+  0% { left: 0; opacity: 0; }
+  20%, 80% { left: 10px; opacity: 1; }
+  100% { left: 100px; opacity: 0; }
+}
 
 @keyframes fillup {
-  0%, 20% {
-    height: 0px;
-    border-width: 0px;
-  }
-
-  40% {
-    height: 40px;
-  }
-
-  80%, 100% {
-    height: 80px;
-    border-width: 5px;
-  }
+  0%, 20% { height: 0px; border-width: 0px; }
+  40% { height: 40px; }
+  80%, 100% { height: 80px; border-width: 5px; }
 }
 
 @keyframes fillupfoam {
-  0%, 20% {
-    top: 0px;
-    height: 0px;
-  }
-
-  60%, 100% {
-    top: -14px;
-    height: 15px;
-  }
+  0%, 20% { top: 0px; height: 0px; }
+  60%, 100% { top: -14px; height: 15px; }
 }
 
 @keyframes wave {
-  from {
-    transform: skew(0, -3deg);
-  }
-
-  to {
-    transform: skew(0, 3deg);
-  }
+  from { transform: skew(0, -3deg); }
+  to { transform: skew(0, 3deg); }
 }
 
 // piano
 
-.slide__activities__piano--wrapper {
+.activities__piano {
   margin-left: 25%;
   margin-top: 90px;
 
-  .slide__activities__piano--key {
+  .piano__key {
     position: relative;
     float: left;
     width: 30px;
@@ -690,7 +628,7 @@
       z-index: 5;
     }
 
-    .slide__activities__piano--key--black {
+    &--black {
       position: absolute;
       left: 40px;
       width: 25px;
@@ -699,7 +637,7 @@
       background: black;
     }
 
-    .slide__activities__piano--key--white {
+    &--white {
       width: 40px;
       height: 150px;
       margin: 10px;

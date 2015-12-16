@@ -228,6 +228,7 @@
   right: 3vw;
   top: 3vw;
   z-index: 10;
+  color: $white;
   cursor: pointer;
   opacity: 0;
   transition-delay: 0.5s;
@@ -238,53 +239,28 @@
 }
 
 @keyframes strip1 {
-  0% {
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+  0% { transform: translate3d(-100%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 
 @keyframes strip2 {
-  0% {
-    transform: translate3d(0, 100%, 0);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+  0% { transform: translate3d(0, 100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 
 @keyframes strip3 {
-  0% {
-    transform: translate3d(0, -100%, 0);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 
 @keyframes strip4 {
-  0% {
-    transform: translate3d(0, 100%, 0);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+  0% { transform: translate3d(0, 100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 
 @keyframes strip5 {
-  0% {
-    transform: translate3d(100%, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 
 
@@ -297,24 +273,24 @@
 }
 
 .carousel .carousel-control {
-	background: none;
-	width: 40px;
-	height: 40px;
-	background-color: rgba(237,90,100,0.4);
-	top: 130px;
-	padding-top: 5px;
-	display: none;
-	border-radius: 50px;
-}
+  display: none;
+  top: 130px;
+  width: 40px;
+  height: 40px;
+  padding-top: 5px;
+  background: none;
+  background-color: rgba(237, 90, 100, 0.4);
+  border-radius: 50px;
 
-.carousel .carousel-control.left {
-	left: 10px;
-}
+  &.left {
+    left: 10px;
+  }
 
-.carousel .carousel-control.right {
-	right: 10px;
-}
+  &.right {
+    right: 10px;
+  }
 
-.carousel .carousel-control:hover {
-	background-color: rgba(237,90,100,0.8);
+  &:hover {
+    background-color: rgba(237, 90, 100, 0.8);
+  }
 }
