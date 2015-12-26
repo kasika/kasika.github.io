@@ -507,35 +507,22 @@
   }
 }
 
-@keyframes flow {
-  0%, 15% { top: 30px; height: 0px; }
-  20% { height: 125px; }
-  40% { top: 30px; height: 85px; }
-  55% { top: 30px; height: 60px; }
-  60%, 100% { top: 70px; height: 0px; }
-}
-
-@keyframes handle {
-  0%, 10% { transform: rotate(0deg); }
-  20%, 50% { transform: rotate(-90deg); }
-  60%, 100% { transform: rotate(0deg); }
-}
-
 .activities__beer--glass {
   position: absolute;
-  bottom: 0;
   height: 100px;
   width: 70px;
-  border-radius: 5px;
+  bottom: 0;
   background-color: rgba(255, 255, 255, 0.0);
-  animation: slide 5s ease forwards infinite;
+  border-radius: 5px;
+  animation: slide-right 5s ease forwards infinite;
+
 
   .front-glass {
     position: relative;
     height: 100%;
     width: 100%;
-    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
   }
 
   .beer {
@@ -543,20 +530,20 @@
     bottom: 15px;
     margin: 0 5px;
     width: 60px;
+    background-color: rgba(255, 206, 84, 0.8);
     border-radius: 0 0 5px 5px;
     border-top: solid 0px rgba(255, 206, 84, 0.8);
-    background-color: rgba(255, 206, 84, 0.8);
     animation: fillup 5s ease infinite;
+  }
 
-    &:after {
-      display: block;
-      position: absolute;
-      content: " ";
-      width: 100%;
-      border-radius: 5px 5px 0 0;
-      background-color: white;
-      animation: fillupfoam 5s linear infinite, wave 0.5s alternate infinite;
-    }
+  .beer:after {
+    position: absolute;
+    display: block;
+    content: " ";
+    width: 100%;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    animation: fillupfoam 5s linear infinite, wave 0.5s alternate infinite;
   }
 
   .handle {
@@ -582,11 +569,26 @@
   }
 }
 
-@keyframes slide {
-  0% { left: 0; opacity: 0; }
-  20%, 80% { left: 10px; opacity: 1; }
-  100% { left: 100px; opacity: 0; }
+@keyframes flow {
+  0%, 15% { top: 30px; height: 0px; }
+  20% { height: 125px; }
+  40% { top: 30px; height: 85px; }
+  55% { top: 30px; height: 60px; }
+  60%, 100% { top: 70px; height: 0px; }
 }
+
+// @keyframes handle {
+//   0%, 10% { transform: rotate(0deg); }
+//   20%, 50% { transform: rotate(-90deg); }
+//   60%, 100% { transform: rotate(0deg); }
+// }
+//
+
+// @keyframes slide-right {
+//   0% { transform: translate3d(0, 0, 0); opacity: 0; }
+//   20%, 80% { transform: translate3d(10px, 0, 0); opacity: 1; }
+//   100% { transform: translate3d(100px, 0, 0); opacity: 0; }
+// }
 
 @keyframes fillup {
   0%, 20% { height: 0px; border-width: 0px; }
@@ -600,8 +602,8 @@
 }
 
 @keyframes wave {
-  from { transform: skew(0, -3deg); }
-  to { transform: skew(0, 3deg); }
+  from { transform: skewZ(0, -3deg); }
+  to { transform: skewZ(0, 3deg); }
 }
 
 // piano
@@ -629,8 +631,9 @@
     }
 
     &--black {
-      position: absolute;
-      left: 40px;
+      position: fixed;
+      z-index: 10;
+      margin-left: 40px;
       width: 25px;
       height: 100px;
       border-radius: 5px;
@@ -638,6 +641,7 @@
     }
 
     &--white {
+      position: fixed;
       width: 40px;
       height: 150px;
       margin: 10px;
