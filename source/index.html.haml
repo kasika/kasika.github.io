@@ -195,7 +195,7 @@ title: Welcome to my life
               .piano__key.four
                 .piano__key--white
 
-%section.slide{ "data-15000" => "top: 100%; ", "data-15500" => "top: 0%; ", "data-16000" => "top: 0%; ", "data-16100" => "top: -100%;"}
+%section.slide{ "data-15000" => "top: 100%; ", "data-15500" => "top: 0%; ", "data-16000" => "top: 0%; ", "data-16500" => "top: -100%;"}
   .strips
     %article.strips__strip
       .strip__content
@@ -371,7 +371,7 @@ title: Welcome to my life
 
   %i.fa.fa-4x.fa-close.strip__close
 
-%section.slide{ "data-16000" => "top: 100%; ", "data-16100" => "top: 0%; ", "data-16600" => "top: 0%; "}
+%section.slide{ "data-16000" => "top: 100%; ", "data-16500" => "top: 0%; ", "data-16600" => "top: 0%; "}
   .container-fluid
     .slide__header.text-center
       .row
@@ -2021,7 +2021,6 @@ title: Welcome to my life
     %path#Fill-1297{:d => "M181.887,150.812 C179.883,150.812 178.258,152.437 178.258,154.441 C178.258,156.446 179.883,158.071 181.887,158.071 C183.892,158.071 185.517,156.446 185.517,154.441 C185.517,152.437 183.892,150.812 181.887,150.812", :fill => "#0F354F"}
     %path#Fill-1298{:d => "M181.887,84.892 C179.883,84.892 178.258,86.517 178.258,88.522 C178.258,90.527 179.883,92.152 181.887,92.152 C183.892,92.152 185.517,90.527 185.517,88.522 C185.517,86.517 183.892,84.892 181.887,84.892", :fill => "#0F354F"}
 
-
 %section.slide{ "data-16600" => "top: -100%; ", "data-16900" => "top: 0%;"}
   .container.text-center
     .slide__contact
@@ -2040,6 +2039,15 @@ title: Welcome to my life
             %i.fa.fa-heart
             by Katarzyna Kowalska
             %p © 2015 All rights reserved
+
+:javascript
+  //<![CDATA[
+      $(window).load(function() { // makes sure the whole site is loaded
+          $('#status').fadeOut(); // will first fade out the loading animation
+          $('#preloader').delay(3000).fadeOut('slow'); // will fade out the white DIV that covers the website.
+          $('body').delay(3000).css({'overflow':'visible'});
+      })
+  //]]>
 
 %script{:src => "javascripts/skrollr.js", :type => "text/javascript"}
 %script{:src => "js/jquery.lazylinepainter-1.1.min.js"}

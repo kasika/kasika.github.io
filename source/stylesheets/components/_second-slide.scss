@@ -1,6 +1,6 @@
 .slide__background {
   .slide__gears {
-    position: absolute;
+    position: relative;
     top: -250px;
     left: 50%;
     width: 1540px;
@@ -22,13 +22,13 @@
 
 @keyframes rotate-left {
   to {
-    transform:rotateZ(360deg);
+    transform: rotateZ(360deg);
   }
 }
 
 @keyframes rotate-right {
   to {
-    transform:rotateZ(-360deg);
+    transform: rotateZ(-360deg);
   }
 }
 

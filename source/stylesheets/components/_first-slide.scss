@@ -1,7 +1,7 @@
 .slide {
   &__header {
     .slide__icons {
-      position: fixed;
+      position: absolute;
       top: 57%;
       left: 50%;
       margin: -300px 0 0 -400px;
@@ -9,7 +9,7 @@
 
     .slide__title {
       margin-top: 20%;
-      
+
       .slide__type-writer {
         &--first {
           position: relative;
@@ -23,7 +23,7 @@
           font-size: 40px;
           color: hsla(43, 100%, 71%, 1);
           border-right: 2px solid rgba(255,255,255,.75);
-          animation: typewriter 3s steps(40) 1s 1 normal both,
+          animation: typewriter 2.5s steps(40) 4s 1 normal both,
                      blinkTextCursor 500ms steps(40) infinite normal;
         }
 
@@ -33,7 +33,7 @@
           font-size: 20px;
           color: hsla(156, 43%, 65%, 1);
           border-right: none;
-          animation: typewriter-2 2s steps(70) 1s 1 normal both;
+          animation: typewriter-2 1s steps(70) 4s 1 normal both;
         }
       }
     }

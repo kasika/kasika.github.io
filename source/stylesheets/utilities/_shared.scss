@@ -9,32 +9,32 @@ body > section {
   background: transparent center no-repeat;
   background-size: cover;
 
-  &:nth-child(1) {
+  &:nth-child(2) {
     background: $first-bg;
   }
 
-  &:nth-child(2) {
+  &:nth-child(3) {
     background: $second-bg;
     overflow: hidden;
   }
 
-  &:nth-child(3) {
+  &:nth-child(4) {
     background: $third-bg;
   }
 
-  &:nth-child(4) {
+  &:nth-child(5) {
     background: $fourth-bg;
   }
 
-  &:nth-child(5) {
+  &:nth-child(6) {
     background: $fifth-bg;
   }
 
-  &:nth-child(6) {
+  &:nth-child(7) {
     background: $sixth-bg;
   }
 
-  &:nth-child(7) {
+  &:nth-child(8) {
     background: $seventh-bg;
   }
 }
@@ -42,4 +42,28 @@ body > section {
 .well {
   background: rgba(252, 252, 252, 0.3);
   height: 400px;
+}
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #fff; /* change if the mask should have another color then white */
+  z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  display: block !important;
+  left: 50%; /* centers the loading animation horizontally one the screen */
+  top: 50%; /* centers the loading animation vertically one the screen */
+  background-image: image_url("preloader_3.gif") ; /* path to your loading animation */
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
