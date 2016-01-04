@@ -119,38 +119,6 @@ var pathObj = {
  *
  */
 
-var pathCity = {
-    "undefined": {
-        "strokepath": [
-            {
-                "path": "M18.115-44.888c45.837 59.667 97.598 127.804 180.521 125.904 65.57-1.501 127.096-41.73 193.394-31.265 67.338 10.629 116.664 71.303 167.169 111.705 53.213 42.57 112.231 66.442 171.979 97.309 45.997 23.766 69.189 58.462 77.456 109.252 5.77 35.415-.088 84.239 22.37 114.638 29.146 39.456 156.977 59.966 101.034 134.771-53.021 70.909-150.769 81.889-210.563 115.771-16.12 9.133-38.475 26.303-51.475 34.803l-1.984 1.312",
-                "duration": 4000,
-            }
-        ],
-        "dimensions": {
-            "width": 2012,
-            "height": 1492
-        }
-    }
-};
-
-
-/*
- Setup and Paint your lazyline!
- */
-
- $(document).ready(function(){
- $('#undefined').lazylinepainter(
- {
-    "svgData": pathCity,
-    "strokeWidth": 2,
-    "strokeColor": "#e09b99",
-    'delay': 1000,
-}).lazylinepainter('paint');
- });/*
- Setup and Paint your lazyline!
- */
-
 
 
 
