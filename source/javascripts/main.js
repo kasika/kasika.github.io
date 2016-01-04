@@ -105,7 +105,7 @@ var pathObj = {
     "svgData": pathObj,
     "strokeWidth": 7,
     "strokeColor": "#024355",
-    'delay': 4000,
+    'delay': 3000,
 }).lazylinepainter('paint');
  });
 
@@ -118,8 +118,6 @@ var pathObj = {
  * Copyright 2013, Cam O'Connell
  *
  */
-
-
 
 
 //4th slide shooting
