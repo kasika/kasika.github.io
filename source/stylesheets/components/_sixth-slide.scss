@@ -119,10 +119,29 @@
 
 .slide__contact {
 	position: absolute;
-	left: 30%;
-	top: 30%;
+	left: 20%;
+	top: 20%;
+  padding: 60px;
+  border-radius: 5px;
+  background: hsla(0, 0%, 20%, 0.8);
+
+  h1 {
+    padding-bottom: 40px;
+    font-size: 60px;
+    color: $third-bg;
+    text-transform: uppercase;
+  }
 
 	footer {
 		margin-top: 30px;
+    color: #8c4b7e;
 	}
+}
+
+.footer-bg {
+  height: 100%;
+  opacity: .3;
+  background-image: image-url("workspace2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
