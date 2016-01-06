@@ -3,6 +3,7 @@
   min-height: 100vh;
   text-align: center;
   color: white;
+  z-index: 2;
 
   &__strip {
     @include easeOut;

@@ -4,6 +4,7 @@
   position: relative;
   overflow: hidden;
   height: 400px;
+  z-index: 0;
 
   @include breakpoint(lt-desktop) {
     top: 20px;
@@ -618,21 +619,9 @@
     width: 30px;
     margin: 7px;
 
-    &.one {
-      z-index: 20;
-    }
-
-    &.two {
-      z-index: 10;
-    }
-
-    &.three {
-      z-index: 5;
-    }
-
     &--black {
       position: fixed;
-      z-index: 10;
+      z-index: 1;
       margin-left: 40px;
       width: 25px;
       height: 100px;
