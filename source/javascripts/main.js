@@ -1,3 +1,22 @@
+$(window).load(function() { // makes sure the whole site is loaded
+  $('#status').fadeOut(); // will first fade out the loading animation
+  $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website.
+  $('body').delay(1000).css({'overflow':'visible'});
+})
+
+$(document).ready(function(){
+  skrollr.init({
+    constants: {
+      //fill the box for a "duration" of 150% of the viewport (pause for 150%)
+      //adjust for shorter/longer pause
+      first: '280p',
+      second: '205p'
+    }
+  });
+});
+
+
+
 /*
  * Lazy Line Painter - Path Object
  * Generated using 'SVG to Lazy Line Converter'
@@ -99,26 +118,15 @@ var pathObj = {
  Setup and Paint your lazyline!
  */
 
- $(document).ready(function(){
- $('#icons').lazylinepainter(
- {
+$(document).ready(function(){
+  $('#icons').lazylinepainter({
     "svgData": pathObj,
     "strokeWidth": 7,
     "strokeColor": "#024355",
     'delay': 3000,
-}).lazylinepainter('paint');
- });
-
-
-/*
- * Lazy Line Painter - Path Object
- * Generated using 'SVG to Lazy Line Converter'
- *
- * http://lazylinepainter.info
- * Copyright 2013, Cam O'Connell
- *
- */
-
+  })
+  .lazylinepainter('paint');
+});
 
 //4th slide shooting
 
